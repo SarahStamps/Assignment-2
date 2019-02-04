@@ -30,7 +30,7 @@ def main():
 
 
 x0 = 1.0
-vx_0 = 70.0         # TODO: capture input
+vx0 = 70.0         # TODO: capture input
 
 y0 = 0.0
 vy0 = 80.0          # TODO: capture input
@@ -46,12 +46,12 @@ y = []
 
 intervals = 170
 
-for i in range(interval):
+for i in range(intervals):
     x.append(px(x0,vx0,t,ax))
     y.append(px(y0,vy0,t,ay))
     t = t + delt
 
-    if y[i + 1] > 0.0:
+    if y[i] < 0.0:            # exits when y value is less than 0
        break
 
 
