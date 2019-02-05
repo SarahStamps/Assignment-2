@@ -18,22 +18,22 @@ Make sure your python module works in dual-mode: by itself or import to other mo
 
 # Function to calculate projectile motion
 def px(x,v,t,a):
-    return x + v*t + 0.5*a*t**2
+    return x + v*t + 0.5*ay*t**2    # formula for position
 
 # Function to plot data
 def plot_data():
-    pass
+       plt.plot(x, y)
+       plt.show()
 
 # "Main" Function
 def main():
     pass
 
+x0 = float(input("initial x position"))
+vx0 = float(input("initial x velocity"))        # TODO: capture input
 
-x0 = 1.0
-vx0 = 70.0         # TODO: capture input
-
-y0 = 0.0
-vy0 = 80.0          # TODO: capture input
+y0 = float(input("initial y position"))
+vy0 = float(input("initial y velocity"))          # TODO: capture input
 
 ax = 0.0
 ay = -9.8           # define a constant
